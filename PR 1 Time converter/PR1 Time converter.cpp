@@ -4,22 +4,27 @@ using namespace std;
 class TimeConverter {
 public:
 
-    // Seconds --> HH:MM:SS
+
     void secondsToTime(int totalSeconds) {
         int hours = totalSeconds / 3600;
         int minutes = (totalSeconds % 3600) / 60;
         int seconds = totalSeconds % 60;
 
         cout << "HH:MM:SS => "
-             << hours << ":"
-             << minutes << ":"
-             << seconds << endl;
+             << hours << ":";
+
+        
+        if (minutes < 10) cout << "0";
+        cout << minutes << ":";
+
+        
+        if (seconds < 10) cout << "0";
+        cout << seconds << endl;
     }
 
-    // HH:MM:SS --> Seconds
+    
     void timeToSeconds(int hours, int minutes, int seconds) {
         int totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
-
         cout << "Total seconds: " << totalSeconds << endl;
     }
 };
@@ -27,7 +32,7 @@ public:
 int main() {
     TimeConverter t;
 
-    // Example 1: Seconds --> HH:MM:SS
+
     int secInput;
     cout << "Enter total seconds: ";
     cin >> secInput;
@@ -35,7 +40,7 @@ int main() {
 
     cout << endl;
 
-    // Example 2: HH:MM:SS --> Seconds
+    
     int h, m, s;
     cout << "Enter hours: ";
     cin >> h;
@@ -43,6 +48,8 @@ int main() {
     cin >> m;
     cout << "Enter seconds: ";
     cin >> s;
+
+    cout << endl;
 
     t.timeToSeconds(h, m, s);
 
@@ -52,13 +59,14 @@ int main() {
 // output //
 
 Enter total seconds: 4200
-HH:MM:SS => 1:10:0
+HH:MM:SS => 1:10:00
 
 Enter hours: 4
 Enter minutes: 34
 Enter seconds: 30
+
 Total seconds: 16470
 
 --------------------------------
-Process exited after 49.78 seconds with return value 0
+Process exited after 19.45 seconds with return value 0
 Press any key to continue . . .
