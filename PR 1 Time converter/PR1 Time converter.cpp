@@ -58,15 +58,17 @@ int main() {
 
 // output //
 
-Enter total seconds: 4200
+Enter total seconds: 4200    
+output:
 HH:MM:SS => 1:10:00
 
 Enter hours: 4
 Enter minutes: 34
 Enter seconds: 30
-
+output:
 Total seconds: 16470
 
 --------------------------------
 Process exited after 19.45 seconds with return value 0
 Press any key to continue . . .
+
