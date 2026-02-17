@@ -187,7 +187,7 @@ Enter Train Name: Okha Express
 Enter Source: Suart
 Enter Destination: Mumbai
 Enter Train Time: 10 AM
-Train added successfully!
+
 
 --- Railway Reservation System Menu ---
 1. Add New Train Record
@@ -223,4 +223,5 @@ Exiting the system. Goodbye!
 
 --------------------------------
 Process exited after 110 seconds with return value 0
+
 Press any key to continue . . .
